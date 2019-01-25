@@ -10,7 +10,7 @@ export const Feed = ({allPosts, postId, postTitle, postBody, message, handleText
   })
 
   return (
-    <div>
+    <div className='App'>
       <PostForm key={postId} postTitle={postTitle} postBody={postBody} message={message} handleTextChange={handleTextChange} handleSubmit={handleSubmit}/>
       {allPosts}
     </div>

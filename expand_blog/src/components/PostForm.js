@@ -3,10 +3,10 @@ import React from 'react'
 export const PostForm = ({postId, postTitle, postBody, message, handleTextChange, handleSubmit}) => {
   return (
     <div>
-      <form onSubmit={handleSubmit} id={postId}>
-        <input type='text' name='postTitle' value={postTitle} onChange={handleTextChange}/>
-        <input type='text' name='postBody' value={postBody} onChange={handleTextChange}/>
-        <input type='submit'/>
+      <form className='PostFormInputs' onSubmit={handleSubmit} id={postId}>
+        <input className='PostFormTitle' type='text' name='postTitle' value={postTitle} onChange={handleTextChange}/>
+        <input className='PostFormBody' type='text' name='postBody' value={postBody} onChange={handleTextChange}/>
+        <input  className='PostFormSubmit'type='submit'/>
       </form>
 
       <section id={postId}>
