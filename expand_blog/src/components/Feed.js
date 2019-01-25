@@ -1,15 +1,17 @@
 import React from 'react'
 import { Post } from './Post'
+import {PostForm } from './PostForm'
 
-export const Feed = (props) => {
-  console.log(props.allPosts);
+export const Feed = ({allPosts, postTitle, postBody, handleTextChange }) => {
+  console.log(allPosts);
 
-  let allPosts = props.allPosts.map(eachPost => {
+  allPosts = allPosts.map(eachPost => {
     return <Post key={eachPost.id} post={eachPost}/>
   })
 
   return (
     <div>
+      <PostForm postTitle={postTitle} postBody={postBody} handleTextChange={handleTextChange}/>
       {allPosts}
     </div>
   )

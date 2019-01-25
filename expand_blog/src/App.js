@@ -8,14 +8,25 @@ class App extends React.Component {
     super()
     this.state = {
       allPosts: blog_posts,
+      postTitle: '',
+      postBody: '',
     }
     // debugger
   }
 
+  handleTextChange = (event) => {
+    this.setState = ({
+      [event.target.name]: event.target.value,
+
+    })
+  }
+
+
   render() {
+    let {allPosts, postTitle, postBody } = this.state
     return (
       <div className='App'>
-        <Feed allPosts={this.state.allPosts} />
+        <Feed allPosts={allPosts} postTitle={postTitle} postBody={postBody} handleTextChange={this.handleTextChange}/>
       </div>
     )
   }
