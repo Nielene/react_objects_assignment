@@ -1,3 +1,9 @@
+(references:
+  notesJS+HTML/class01162019-ReactObjectsArrays
+  notesJS+HTML/class01172019-react-todos-1
+  forms3 instructions: https://github.com/joinpursuit/Pursuit-Core-Web/blob/master/react/forms_3/forms_3.md
+  )
+
 # Expand Your Blog
 
 Remember the blog project from our Props lesson? You might have noticed something missing- we can't create a new post! Let's fix that.

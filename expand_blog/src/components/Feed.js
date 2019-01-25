@@ -2,7 +2,7 @@ import React from 'react'
 import { Post } from './Post'
 import {PostForm } from './PostForm'
 
-export const Feed = ({allPosts, postTitle, postBody, handleTextChange }) => {
+export const Feed = ({allPosts, postId, postTitle, postBody, message, handleTextChange, handleSubmit }) => {
   console.log(allPosts);
 
   allPosts = allPosts.map(eachPost => {
@@ -11,7 +11,7 @@ export const Feed = ({allPosts, postTitle, postBody, handleTextChange }) => {
 
   return (
     <div>
-      <PostForm postTitle={postTitle} postBody={postBody} handleTextChange={handleTextChange}/>
+      <PostForm key={postId} postTitle={postTitle} postBody={postBody} message={message} handleTextChange={handleTextChange} handleSubmit={handleSubmit}/>
       {allPosts}
     </div>
   )
